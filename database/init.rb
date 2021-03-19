@@ -6,10 +6,13 @@ def init_database
     CREATE TABLE IF NOT EXISTS heros (
       id INTEGER PRIMARY KEY, 
       name VARCHAR(55), 
-      level INTEGER, 
+      level FLOAT, 
       life INTEGER, 
       food INTEGER, 
-      thirst INTEGER
+      thirst INTEGER,
+      attack_start_time TIME NULL,
+      attack_end_time TIME NULL,
+      attack_type VARCHAR(10) NULL
     );
   SQL
 end
